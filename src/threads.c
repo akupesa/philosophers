@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
 int	wait_for_threads(t_data *data, pthread_t *philo_threads)
 {

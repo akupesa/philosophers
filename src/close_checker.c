@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
 static int	is_must_eat_reached(t_data *data, int *must_eat_reached)
 {
