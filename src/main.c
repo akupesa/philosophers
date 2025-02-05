@@ -41,7 +41,7 @@ int	arguments_validator(int argc, char **argv)
 	return (0);
 }
 
-void	deinit_structs(t_data *data)
+void	destroy_structs(t_data *data)
 {
 	int	i;
 
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 		waiting_time(9000);
 	}
 	wait_for_threads(data, philo_threads);
-	deinit_structs(data);
+	destroy_structs(data);
 	free(data);
 	free(philo_threads);
 	return (0);

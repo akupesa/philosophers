@@ -56,46 +56,23 @@ typedef struct s_data
 	t_philos		*p_philos;
 }	t_data;
 
-// init.c
-int		init(t_data *data, int argc, char **argv);
-
-// utils.c
 int		is_digits(char *str);
-int		ft_atoi(const char *nprt);
-
-// philo.c
-void	*philo_thread(void *arg);
-
-// threads.c
-int		create_threads(t_data *data, pthread_t *philo_threads);
-int		init_threads(t_data *data, pthread_t	**philo_threads);
-int		wait_for_threads(t_data *data, pthread_t *philo_threads);
-
-// waiting_time.c
-void	waiting_time(long time_to_sleep);
-
-// fill_state.c
-void	fill_state(t_data *data);
-
-// init_arguments.c
-int		init_arguments(t_data *data, int argc, char **argv);
-
-// close_checker.c
-int		is_program_closed(t_data *data);
-
-// print_state_change.c
-void	print_state_change(char *message, t_data *data);
-void	print_state_change(char *message, t_data *data);
-
-// forks.c
-int		acquire_forks(t_data *data);
-void	release_forks(t_data *data);
-
-// dead.c
-int		am_i_dead(t_data *data, struct timeval *tv);
+int		ft_atoi(const char *str);
 int		is_dead_flag(t_data *data);
-
-// thinking.c
+int		acquire_forks(t_data *data);
+int		is_program_closed(t_data *data);
+int		init(t_data *data, int argc, char **argv);
+int		am_i_dead(t_data *data, struct timeval *tv);
+int		init_arguments(t_data *data, int argc, char **argv);
+int		create_threads(t_data *data, pthread_t *philo_threads);
+int		wait_for_threads(t_data *data, pthread_t *philo_threads);
+int		init_threads(t_data *data, pthread_t	**philo_threads);
 void	thinking(t_data *data);
+void	*philo_thread(void *arg);
+void	fill_state(t_data *data);
+void	release_forks(t_data *data);
+void	waiting_time(long time_to_sleep);
+void	print_state_change(char *message, t_data *data);
+void	print_state_change(char *message, t_data *data);
 
 #endif

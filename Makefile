@@ -13,7 +13,7 @@
 CC = cc
 FLAGS = -Wall -Werror -Wextra -g
 OBJDIR = obj
-HEADER := src/philo.h
+HEADER := philo.h
 SRC = 	src/main.c \
 		src/dead.c \
 		src/time.c \
